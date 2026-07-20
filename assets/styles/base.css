@@ -15,6 +15,15 @@ html {
   --text: #201C16;
   --text-muted: #6B6255;
 
+  --belt-color: #201C16; 
+  --belt-text: #FFFFFF;
+
+  --cor-branca: #F5F5F0;
+  --cor-azul: #1E5FA8;
+  --cor-roxa: #6A3093;
+  --cor-marrom: #5A3A24;
+  --cor-preta: #17171A;
+
   --font-display: "Oswald", "Segoe UI", sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
 
