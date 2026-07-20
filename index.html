@@ -23,6 +23,62 @@
   </head>
 
   <body>
+    <!--Modal-->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <p class="eyebrow">antes de começar</p>
+        <h2>Qual é a sua faixa?</h2>
+        <p class="modal-desc">
+          Vamos personalizar o site com a cor da sua faixa.
+        </p>
+        <div class="belt-options">
+          <button
+            class="belt-btn"
+            data-belt="branca"
+            data-cor="#F5F5F0"
+            data-texto="#201C16"
+          >
+            Branca
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="azul"
+            data-cor="#1E5FA8"
+            data-texto="#FFFFFF"
+          >
+            Azul
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="roxa"
+            data-cor="#6A3093"
+            data-texto="#FFFFFF"
+          >
+            Roxa
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="marrom"
+            data-cor="#5A3A24"
+            data-texto="#FFFFFF"
+          >
+            Marrom
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="preta"
+            data-cor="#17171A"
+            data-texto="#FFFFFF"
+          >
+            Preta
+          </button>
+        </div>
+        <p class="modal-hint">
+          Ainda não treina? Escolha "Branca" — é onde todo mundo começa.
+        </p>
+      </div>
+    </div>
+
     <!--Header-->
     <header class="site-header" id="siteHeader">
       <div class="container header-inner">
@@ -96,44 +152,53 @@
         <div class="container">
           <p class="eyebrow">progressão</p>
           <h2>Sistema de faixas (adulto)</h2>
-
           <div class="faixas-grid">
-            <h3>Branca</h3>
-            <p>
-              O início da jornada. Foco em sobrevivência, fundamentos e aprender
-              a "linguagem" do jogo.
-            </p>
-
-            <h3>Azul</h3>
-            <p>
-              Ampliação do repertório técnico. Já é possível competir e começar
-              a desenvolver um jogo próprio.
-            </p>
-
-            <h3>Roxa</h3>
-            <p>
-              Refinamento técnico e início da maturidade no jogo. Muitos começam
-              a ajudar a ensinar faixas mais novas.
-            </p>
-
-            <h3>Marrom</h3>
-            <p>
-              Preparação final para a faixa preta. Consistência, profundidade
-              técnica e liderança no tatame.
-            </p>
-
-            <h3>Preta</h3>
-            <p>
-              Não é o fim, é o começo de um novo ciclo de aprendizado, agora
-              como referência para os demais.
-            </p>
-
-            <p class="faixas-nota">
-              Na faixa preta, os graus são marcados por barras vermelhas no cabo
-              da faixa (até 6º grau), até chegar às faixas de coral e vermelha,
-              reservadas a grandes mestres da arte.
-            </p>
+            <article class="faixa-card" data-belt="branca">
+              <span class="faixa-cor cor-branca"></span>
+              <h3>Branca</h3>
+              <p>
+                O início da jornada. Foco em sobrevivência, fundamentos e
+                aprender a "linguagem" do jogo.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="azul">
+              <span class="faixa-cor cor-azul"></span>
+              <h3>Azul</h3>
+              <p>
+                Ampliação do repertório técnico. Já é possível competir e
+                começar a desenvolver um jogo próprio.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="roxa">
+              <span class="faixa-cor cor-roxa"></span>
+              <h3>Roxa</h3>
+              <p>
+                Refinamento técnico e início da maturidade no jogo. Muitos
+                começam a ajudar a ensinar faixas mais novas.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="marrom">
+              <span class="faixa-cor cor-marrom"></span>
+              <h3>Marrom</h3>
+              <p>
+                Preparação final para a faixa preta. Consistência, profundidade
+                técnica e liderança no tatame.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="preta">
+              <span class="faixa-cor cor-preta"></span>
+              <h3>Preta</h3>
+              <p>
+                Não é o fim — é o começo de um novo ciclo de aprendizado, agora
+                como referência para os demais.
+              </p>
+            </article>
           </div>
+          <p class="faixas-nota">
+            Na faixa preta, os graus são marcados por barras vermelhas no cabo
+            da faixa (até 6º grau), até chegar às faixas de coral e vermelha,
+            reservadas a grandes mestres da arte.
+          </p>
         </div>
       </section>
 
@@ -240,6 +305,34 @@
           </div>
 
           <!--Mapa-->
+
+          <div class="mapa-wrap">
+            <div class="mapa-placeholder" id="mapaPlaceholder">
+              <p>
+                O mapa com academias próximas vai aparecer aqui após a busca do
+                CEP.
+              </p>
+            </div>
+            <iframe
+              id="mapaFrame"
+              class="mapa-frame"
+              title="Mapa com academias de Jiu-Jitsu próximas"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              hidden
+            >
+            </iframe>
+            <a
+              href="#"
+              id="abrirMapsLink"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener"
+              hidden
+              >Abrir no Google Maps</a
+            >
+          </div>
+        </div>
       </section>
 
       <!-- Inscreva-->
@@ -291,11 +384,15 @@
       </section>
     </main>
 
+    <!--Footer-->
     <footer>
-      <p>
-        &copy; <span id="ano"></span> Luis Carlos Paulon. Todos os direitos
-        reservados.
-      </p>
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="ano"></span> Jiu-Jitsu.BR. Todos os direitos
+          reservados.
+        </p>
+        <p class="footer-tag">Oss!</p>
+      </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
