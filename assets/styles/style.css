@@ -357,3 +357,147 @@ section {
   color: var(--text-muted);
   transition: border-color 0.3s ease;
 }
+
+/*Academias (mapa e cep)*/
+.academias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.academias-desc {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.cep-form label {
+  display: block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+.cep-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cep-row input {
+  flex: 1;
+  min-width: 160px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+.cep-row input:focus {
+  outline: none;
+  border-color: var(--belt-color);
+}
+
+.cep-status {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.cep-status.error {
+  color: #b3261e;
+}
+.cep-status.ok {
+  color: var(--belt-color);
+}
+
+.endereco-encontrado {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.mapa-wrap {
+  position: relative;
+}
+.mapa-placeholder {
+  height: 320px;
+  border-radius: var(--radius);
+  border: 1px dashed var(--line);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 24px;
+  font-size: 0.95rem;
+}
+.mapa-frame {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: var(--radius);
+}
+#abrirMapsLink {
+  margin-top: 14px;
+}
+
+
+/* Inscreva-se*/ 
+.inscreva-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.inscreva-desc {
+  color: var(--text-muted);
+  max-width: 46ch;
+}
+
+.inscreva-form {
+  display: grid;
+  gap: 18px;
+}
+.field {
+  display: grid;
+  gap: 8px;
+}
+.field label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+.inscreva-form input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+.inscreva-form input:focus {
+  outline: none;
+  border-color: var(--belt-color);
+}
+.inscreva-form .btn {
+  justify-self: start;
+}
+
+.inscreva-obrigado {
+  grid-column: 2;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--belt-color);
+  border-radius: 8px;
+  padding: 18px 20px;
+  font-size: 0.95rem;
+}
