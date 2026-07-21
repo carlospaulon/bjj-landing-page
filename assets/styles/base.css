@@ -1,17 +1,55 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #F5F1E8;        
+  --surface: #FFFFFF;
+  --line: #E3DACB;
+  --text: #201C16;
+  --text-muted: #6B6255;
+
+  --belt-color: #201C16; 
+  --belt-text: #FFFFFF;
+
+  --cor-branca: #F5F5F0;
+  --cor-azul: #1E5FA8;
+  --cor-roxa: #6A3093;
+  --cor-marrom: #5A3A24;
+  --cor-preta: #17171A;
+
+  --font-display: "Oswald", "Segoe UI", sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --radius: 10px;
+  --container: 1080px;
 }
 
 body {
-    background: linear-gradient(180deg, rgb(138, 129, 236) 0%, #a2d3ee 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
 
-    /* background-position: center;
-    background-size: cover; */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

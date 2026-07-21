@@ -1,14 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BJJ - Arte Suave</title>
 
-    <link rel="stylesheet" href="assets/styles/base.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
-</head>
-<body>
-    <h1>A Arte Suave</h1>
-</body>
+    <meta
+      name="description"
+      content="Tudo sobre o Jiu-Jitsu Brasileiro: história, faixas, benefícios e academias perto de você."
+    />
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+
+  <body>
+    <!--Modal-->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <p class="eyebrow">antes de começar</p>
+        <h2>Qual é a sua faixa?</h2>
+        <p class="modal-desc">
+          Vamos personalizar o site com a cor da sua faixa.
+        </p>
+        <div class="belt-options">
+          <button
+            class="belt-btn"
+            data-belt="branca"
+            data-cor="#F5F5F0"
+            data-texto="#201C16"
+          >
+            Branca
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="azul"
+            data-cor="#1E5FA8"
+            data-texto="#FFFFFF"
+          >
+            Azul
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="roxa"
+            data-cor="#6A3093"
+            data-texto="#FFFFFF"
+          >
+            Roxa
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="marrom"
+            data-cor="#5A3A24"
+            data-texto="#FFFFFF"
+          >
+            Marrom
+          </button>
+          <button
+            class="belt-btn"
+            data-belt="preta"
+            data-cor="#17171A"
+            data-texto="#FFFFFF"
+          >
+            Preta
+          </button>
+        </div>
+        <p class="modal-hint">
+          Ainda não treina? Escolha "Branca", é onde todo mundo começa. 
+          Exceto os colorados, que já começam sabendo até armlock voador.
+        </p>
+      </div>
+    </div>
+
+    <!--Header-->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#topo" class="logo">
+          Jiu-Jitsu<span class="logo-accent">.BR</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#sobre">O que é</a>
+          <a href="#faixas">Faixas</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#academias">Academias</a>
+          <a href="#inscreva">Inscreva-se</a>
+        </nav>
+
+        <button class="btn btn-trocar" id="trocarFaixaBtn" type="button">
+          Trocar faixa
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!--Hero-->
+      <section class="hero" id="topo">
+        <p class="bem-vindo" id="heroBemVindo">bem-vindo(a)</p>
+        <h1>A Arte Suave</h1>
+        <p class="hero-desc">
+          O Jiu-Jitsu Brasileiro é uma arte marcial e esporte de combate que
+          ensina que a técnica e a estratégia superam a força bruta no tatame e
+          na vida.
+        </p>
+
+        <!--Faixa-->
+        <div class="tira-faixa" id="tiraFaixa"></div>
+
+        <div class="hero-actions">
+          <a href="#sobre" class="btn btn-ghost">Saiba mais</a>
+          <a href="#academias" class="btn btn-primary"
+            >Encontrar academia perto de mim</a
+          >
+        </div>
+      </section>
+
+      <!--Sobre-->
+      <section class="sobre" id="sobre">
+        <div class="container">
+          <p class="eyebrow">a arte</p>
+          <h2>O que é o Jiu-Jitsu?</h2>
+          <div class="sobre-grid">
+            <p>
+              O Jiu-Jitsu Brasileiro (BJJ) é uma arte marcial focada em luta
+              agarrada e no combate no chão (<em>ground fighting</em>). A ideia
+              central é permitir que uma pessoa mais fraca ou mais leve consiga
+              se defender e até vencer um oponente maior, usando alavancas,
+              posicionamento e finalizações, como estrangulamentos e chaves de
+              articulação, em vez de força bruta.
+            </p>
+            <p>
+              A arte nasceu no Japão como Jiu-Jitsu tradicional e foi adaptada
+              no Brasil, principalmente pela família Gracie, no início do século
+              XX. Ao longo das décadas, o BJJ se espalhou pelo mundo e hoje é
+              praticado tanto como esporte de competição quanto como defesa
+              pessoal, além de ser uma base fundamental para atletas de MMA.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faixas" id="faixas">
+        <div class="container">
+          <p class="eyebrow">progressão</p>
+          <h2>Sistema de faixas (adulto)</h2>
+          <div class="faixas-grid">
+            <article class="faixa-card" data-belt="branca">
+              <span class="faixa-cor cor-branca"></span>
+              <h3>Branca</h3>
+              <p>
+                O início da jornada. Foco em sobrevivência, fundamentos e
+                aprender a "linguagem" do jogo.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="azul">
+              <span class="faixa-cor cor-azul"></span>
+              <h3>Azul</h3>
+              <p>
+                Ampliação do repertório técnico. Já é possível competir e
+                começar a desenvolver um jogo próprio.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="roxa">
+              <span class="faixa-cor cor-roxa"></span>
+              <h3>Roxa</h3>
+              <p>
+                Refinamento técnico e início da maturidade no jogo. Muitos
+                começam a ajudar a ensinar faixas mais novas.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="marrom">
+              <span class="faixa-cor cor-marrom"></span>
+              <h3>Marrom</h3>
+              <p>
+                Preparação final para a faixa preta. Consistência, profundidade
+                técnica e liderança no tatame.
+              </p>
+            </article>
+            <article class="faixa-card" data-belt="preta">
+              <span class="faixa-cor cor-preta"></span>
+              <h3>Preta</h3>
+              <p>
+                Não é o fim, é o começo de um novo ciclo de aprendizado, agora
+                como referência para os demais.
+              </p>
+            </article>
+          </div>
+          <p class="faixas-nota">
+            Na faixa preta, os graus são indicados por barras brancas na tarja
+            vermelha da faixa (até o 6º grau). Depois vêm as faixas coral (7º e
+            8º graus) e, por fim, a faixa vermelha (9º e 10º graus), reservada
+            aos grandes mestres da arte.
+          </p>
+        </div>
+      </section>
+
+      <!--Beneficios-->
+      <section class="beneficios" id="beneficios">
+        <div class="container">
+          <p class="eyebrow">por que treinar</p>
+          <h2>Benefícios do Jiu-Jitsu</h2>
+          <div class="beneficios-grid">
+            <div class="beneficio-item">
+              <h3>Condicionamento físico</h3>
+              <p>
+                Trabalha força, resistência, mobilidade e flexibilidade em cada
+                treino.
+              </p>
+            </div>
+            <div class="beneficio-item">
+              <h3>Saúde mental</h3>
+              <p>
+                Reduz o estresse, exige foco total e ajuda a desenvolver
+                paciência e resiliência.
+              </p>
+            </div>
+            <div class="beneficio-item">
+              <h3>Autodefesa real</h3>
+              <p>
+                Ensina a se defender mesmo contra oponentes maiores, sem
+                depender da força.
+              </p>
+            </div>
+            <div class="beneficio-item">
+              <h3>Comunidade</h3>
+              <p>
+                O tatame cria amizades e uma rede de apoio que vai muito além do
+                treino.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Curiosidades-->
+      <section class="curiosidades" id="curiosidades">
+        <div class="container">
+          <p class="eyebrow">você sabia?</p>
+          <h2>Curiosidades</h2>
+          <ul class="curiosidades-list">
+            <li>
+              O termo "Jiu-Jitsu" vem do japonês e significa, aproximadamente,
+              "arte suave".
+            </li>
+            <li>
+              Não existe faixa infantil preta: crianças evoluem por faixas
+              específicas (cinza, amarela, laranja e verde) até os 16 anos.
+            </li>
+            <li>
+              O tempo médio para chegar à faixa preta gira em torno de 10 anos
+              de treino consistente.
+            </li>
+            <li>
+              O Jiu-Jitsu é uma das bases técnicas mais importantes do MMA
+              moderno.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Academias com cep e google maps-->
+      <section class="academias" id="academias">
+        <div class="container academias-grid">
+          <div>
+            <p class="eyebrow">na prática</p>
+            <h2>Academias perto de você</h2>
+            <p class="academias-desc">
+              Informe seu CEP para localizarmos sua cidade e mostrarmos
+              academias de Jiu-Jitsu na região, usando o Google Maps.
+            </p>
+
+            <form class="cep-form" id="cepForm">
+              <label for="cep">CEP</label>
+              <div class="cep-row">
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep"
+                  placeholder="00000-000"
+                  inputmode="numeric"
+                  maxlength="9"
+                  required
+                />
+                <button type="submit" class="btn btn-primary">
+                  Buscar academias
+                </button>
+              </div>
+              <p class="cep-status" id="cepStatus" aria-live="polite"></p>
+            </form>
+
+            <div class="endereco-encontrado" id="enderecoEncontrado" hidden>
+              <p>
+                <strong>Cidade encontrada:</strong>
+                <span id="cidadeEncontrada"></span>
+              </p>
+            </div>
+          </div>
+
+          <!--Mapa-->
+
+          <div class="mapa-wrap">
+            <div class="mapa-placeholder" id="mapaPlaceholder">
+              <p>
+                O mapa com academias próximas vai aparecer aqui após a busca do
+                CEP.
+              </p>
+            </div>
+            <iframe
+              id="mapaFrame"
+              class="mapa-frame"
+              title="Mapa com academias de Jiu-Jitsu próximas"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              hidden
+            >
+            </iframe>
+            <a
+              href="#"
+              id="abrirMapsLink"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener"
+              hidden
+              >Abrir no Google Maps</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Inscreva-->
+      <section class="inscreva" id="inscreva">
+        <div class="container inscreva-grid">
+          <div>
+            <p class="eyebrow">fique por dentro</p>
+            <h2>Inscreva-se</h2>
+            <p class="inscreva-desc">
+              Receba dicas de treino, curiosidades sobre o Jiu-Jitsu e novidades
+              do site direto no seu e-mail. Sem spam.
+            </p>
+          </div>
+
+          <form class="inscreva-form" id="inscrevaForm">
+            <div class="field">
+              <label for="inscNome">Nome</label>
+              <input
+                type="text"
+                id="inscNome"
+                name="inscNome"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="inscEmail">E-mail</label>
+              <input
+                type="email"
+                id="inscEmail"
+                name="inscEmail"
+                placeholder="voce@email.com"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Quero me inscrever
+            </button>
+          </form>
+
+          <div class="inscreva-obrigado" id="inscrevaObrigado" hidden>
+            <p>
+              <strong>Inscrição confirmada!</strong> Valeu,
+              <span id="inscrevaNome">guerreiro(a)</span> - em breve você recebe
+              as novidades no e-mail informado.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="ano"></span> Jiu-Jitsu.BR. Todos os direitos
+          reservados.
+        </p>
+        <p class="footer-tag">Oss!</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
