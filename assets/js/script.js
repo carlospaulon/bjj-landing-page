@@ -109,3 +109,18 @@ cepForm.addEventListener("submit", async (evento) => {
     cepStatus.className = "cep-status error";
   }
 });
+
+//formulario inscrição
+const inscrevaForm = document.getElementById("inscrevaForm");
+const inscrevaObrigado = document.getElementById("inscrevaObrigado");
+const inscrevaNome = document.getElementById("inscrevaNome");
+
+inscrevaForm.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+
+  const nome = document.getElementById("inscNome").value.trim();
+
+  inscrevaForm.hidden = true;
+  inscrevaObrigado.hidden = false;
+  inscrevaNome.textContent = nome || "guerreiro(a)";
+});
