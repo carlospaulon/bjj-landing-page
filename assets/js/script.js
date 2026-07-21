@@ -96,7 +96,7 @@ cepForm.addEventListener("submit", async (evento) => {
 
     mapaFrame.src = mapsEmbedUrl;
     mapaFrame.hidden = false;
-    mapaPlaceholder.hidden = true;
+    mapaPlaceholder.style.display = "none";
 
     abrirMapsLink.href = mapsLinkUrl;
     abrirMapsLink.hidden = false;
