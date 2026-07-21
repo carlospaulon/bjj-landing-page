@@ -447,8 +447,7 @@ section {
   margin-top: 14px;
 }
 
-
-/* Inscreva-se*/ 
+/* Inscreva-se*/
 .inscreva-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -500,4 +499,57 @@ section {
   border-radius: 8px;
   padding: 18px 20px;
   font-size: 0.95rem;
+}
+
+/*footer*/
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/*responsividade*/
+@media (max-width: 860px) {
+  .academias-grid {
+    grid-template-columns: 1fr;
+  }
+  .inscreva-grid {
+    grid-template-columns: 1fr;
+  }
+  .inscreva-obrigado {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav {
+    gap: 16px;
+  }
+  .hero {
+    padding: 64px 24px 56px;
+  }
+  section {
+    padding: 56px 0;
+  }
+  .tira-faixa {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
