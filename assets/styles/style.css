@@ -474,7 +474,8 @@ section {
   letter-spacing: 0.04em;
   color: var(--text-muted);
 }
-.inscreva-form input {
+.inscreva-form input,
+.inscreva-form textarea {
   font-family: var(--font-body);
   font-size: 1rem;
   padding: 13px 14px;
@@ -483,12 +484,19 @@ section {
   background: var(--surface);
   color: var(--text);
 }
-.inscreva-form input:focus {
+
+.inscreva-form input:focus,
+.inscreva-form textarea:focus {
   outline: none;
   border-color: var(--belt-color);
 }
 .inscreva-form .btn {
   justify-self: start;
+}
+
+.inscreva-form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .inscreva-obrigado {
